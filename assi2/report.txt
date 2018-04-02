@@ -1,0 +1,77 @@
+Nodejs and mongoose
+
+1. This is a small project which uses nodejs and mogoose to do a restful api work.
+
+
+2. The restful api supports
+
+localhost:3000/leaders
+localhost:3000/leaders/:leaderID
+localhost:3000/promotions
+localhost:3000/promotions/:promotionID
+
+
+2.2 the leader storage will be
+{
+  name:{
+    type:String,
+    required:true,
+    unique:true
+  },
+  image:{
+    type:String,
+    required:true,
+    unique:true
+  },
+  designation:{
+    type:String,
+    required:true
+  },
+  abbr:{
+    type:String,
+    required:true
+  },
+  description:{
+    type:String,
+    required:true
+  }
+}
+  the promotion storage will be :
+  {
+    name:{
+      type:String,
+      required:true,
+      unique:true
+    },
+    image:{
+      type:String,
+      required:true,
+      unique:true
+    },
+    label:{
+      type:String,
+      default:""
+    },
+    price:{
+      type:Currency,
+      required:true,
+      min:0
+    },
+    description:{
+      type:String,
+      required:true
+    },
+    featured:{
+      type:Boolean,
+      default:false
+    }
+  }
+
+
+  2.3 the communication between front end and back end will be
+    each of the Documents
+
+  3. this is a project which stores data into database and can get them as well.
+
+
+  4. the project is available at https://github.com/Embracethevoid/Coursera-Nodejs
